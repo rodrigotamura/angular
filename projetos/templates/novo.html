@@ -1,0 +1,17 @@
+<h1>Cadastro de novo projeto</h1>
+<form ng-submit="adicionar(item)" ng-init="inicia()">
+
+    <input type="hidden" ng-model="item.acao" />
+
+    <p class="bg-success" ng-hide="boxSuccess">Cadastrado com sucesso!</p>
+    <div class="form-group">
+        <label for="nome">Nome:</label>
+        <input type="text" class="form-control" id="nome" ng-model="item.nome">
+    </div>
+    <div class="form-group">
+        <label for="desc">Descrição</label>
+        <textarea class="form-control" id="desc" rows="3" ng-model="item.desc"></textarea>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Cadastrar</button>
+</form>

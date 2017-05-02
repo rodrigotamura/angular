@@ -1,0 +1,1 @@
+var projeto = angular.module("projetos", ['ngRoute', 'ngResource']);

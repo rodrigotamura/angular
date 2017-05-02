@@ -1,0 +1,9 @@
+<input type="text" ng-model="registro.nome" />
+<h1>Projetos</h1>
+<table class="table">
+    <thead><tr><th>#</th><th>Nome do projeto</th><th>Descrição</th><th>Ação</th></tr></thead>
+    <tbody ng-repeat="p in registros | orderBy:'nome'">
+        <tr><td>{{p.id}}</td><td>{{p.nome}}</td><td>{{p.desc}}</td><td><a href="#/edita/{{p.id}}" class="btn btn-primary"><span class="glyphicon glyphicon-edit"></span> Editar</a> <a href="#/deleta/{{p.id}}" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span> Remover</a></td></tr>
+    </tbody>
+    <tbody ng-show="!projetos.length"><tr><td colspan="3">Sem resultados</td></tr></tbody>
+</table>
